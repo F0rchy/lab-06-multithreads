@@ -36,7 +36,8 @@ void HashSearch::json_filling() {
     j = nlohmann::json{
                        {"DATA", stream.str()},
                        {"HASH", hash_list[i].hash_string},
-                       {"SEARCH TIME", std::to_string(hash_list[i].search_time)}};
+                       {"SEARCH TIME",
+                        std::to_string(hash_list[i].search_time)}};
     o << j << std::endl;
     stream.str("");
   }
